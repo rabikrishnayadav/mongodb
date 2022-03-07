@@ -9,5 +9,35 @@
   </head>
   <body>
     <h1 class="bg-info text-center p-2 text-light">Learn Mongo database</h1>
+    <div class="container">
+      <h3>Basic Command For Mongo DB</h3>
+      <hr />
+      <ul>
+        <li>for start the mongo db</li>
+        Syntax: mongo
+        <li>For show database</li>
+        Syntax: show dbs
+        <li>For Create Database or Select Exitsting Database</li>
+        Syntax: use 'dbName'<br />
+        Example: use learnmongodb
+        <li>for create Collection(Table)</li>
+        Syntax: db.collectionName.insertOne({fields:'documents'})
+        <br />
+        Example: db.mydata.insertOne({name:'React Js', type:'Front End',
+        Videos:80, active:true})
+        <li>show active database name</li>
+        Syntax: db
+        <li>For show the collections(tables) inside database</li>
+        Syntax: show collections
+        <li>for show documents inside the collection(table)</li>
+        Syntax: db.dbName.find()<br />
+        Example1: db.mydata.find()
+        <br />
+        Example2: db.mydata.find().pretty();
+        <li>for exit from mongo db</li>
+        Syntax: quit()<br />
+        Syntax: ctrl+c
+      </ul>
+    </div>
   </body>
 </html>

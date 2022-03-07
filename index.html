@@ -21,7 +21,7 @@
         Syntax: use 'dbName'<br />
         Example: use learnmongodb
         <li>for create Collection(Table)</li>
-        Syntax: db.collectionName.insertOne({fields:'documents'})
+        Syntax: db.collectionName.insertOne({field:value})
         <br />
         Example: db.mydata.insertOne({name:'React Js', type:'Front End',
         Videos:80, active:true})
@@ -30,7 +30,7 @@
         <li>For show the collections(tables) inside database</li>
         Syntax: show collections
         <li>for show documents inside the collection(table)</li>
-        Syntax: db.dbName.find()<br />
+        Syntax: db.collectionName.find()<br />
         Example1: db.mydata.find()
         <br />
         Example2: db.mydata.find().pretty();
@@ -38,6 +38,32 @@
         Syntax: quit()<br />
         Syntax: ctrl+c
       </ul>
+    </div>
+    <div class="container">
+      <h3>CRUD Operation of Mongo DB</h3>
+      <hr />
+      <h5>First Start Mongo DB</h5>
+      Syntax: mongo
+      <ol>
+        <li><h4>Create</h4></li>
+        <ul>
+          <li><h5>Create Database</h5></li>
+          Syntax: use databaseName<br />
+          Example: use learnmongodb
+          <li><h5>Insert Collection(table) in Database with Documents</h5></li>
+          Syntax 1: db.collaction.insertOne()<br />
+          for insert One documents<br /><br />
+          Example: db.users.insertOne({name:'Rabi Kr Yadav', age:26,
+          status:true})<br /><br />
+          Syntax 2: db.collaction.insertMany()<br />
+          for insert Multiple documents using Array of Object<br /><br />
+          Example: db.users.insertMany([{name:'Krishan', age:25,
+          status:false},{name:'Rakesh', age:24, status:false}])
+        </ul>
+        <li><h4>Read</h4></li>
+        <li><h4>Update</h4></li>
+        <li><h4>Delete</h4></li>
+      </ol>
     </div>
   </body>
 </html>

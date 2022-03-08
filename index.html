@@ -61,6 +61,47 @@
           status:false},{name:'Rakesh', age:24, status:false}])
         </ul>
         <li><h4>Read</h4></li>
+        Syntax: db.collection.find(query, projection)
+        <ul>
+          <li>Show Database list</li>
+          Syntax: show dbs<br /><br />
+          <li>Select Database</li>
+          Syntax: use databaseName Example: use users<br /><br />
+          <li>Show Selected Database</li>
+          Syntax: db<br /><br />
+          <li>Show Collections</li>
+          Syntax: show collections)<br /><br />
+          <li>Find all Documents(data) inside collection(table)</li>
+          Syntax: db.collection.find()<br /><br />
+          <li>Find all Documents in Pretty Format</li>
+          Syntax: db.collection.find().pretty()<br /><br />
+          <li>Find custom document with query</li>
+          Syntax: db.collection.find(query)<br />
+          Example: db.collection.find({name:'Rabi Kr Yadav'})<br /><br />
+          <li>Find custom document with custom query(feild)</li>
+          Syntax: db.collection.find(query,projection)<br />
+          Example 1: db.collection.find({name:'Rabi Kr Yadav'},{name:1})<br /><br />
+          Example 2: db.collection.find({name:'Rabi Kr Yadav'},{_id:0,
+          name:1})<br />
+          Example 3: db.collection.find({name:'Rabi Kr Yadav'},{_id:0, name:1,
+          age:1})<br />
+          <span class="text-info"
+            >Note: where 0 for false (hide) or 1 for true (show) the
+            feilds</span
+          ><br />
+          <li>show only limited field from Many Matching Documents</li>
+          Syntax 1: db.users.find(query).limit(value)<br />
+          Example: db.users.find({status:true}).limit(2)<br /><br />
+          Syntax 2: db.users.findOne(query)<br />
+          Example: db.users.findOne({status:true})<br /><br />
+          <li>
+            show only limited field from Many Matching Documents with skip first
+            document
+          </li>
+          Syntax: db.users.find(query).pretty().limit(value).skip(value)<br />
+          Example: db.users.find({status:true}).pretty().limit(2).skip(1)<br /><br />
+        </ul>
+
         <li><h4>Update</h4></li>
         <li><h4>Delete</h4></li>
       </ol>

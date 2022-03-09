@@ -103,6 +103,16 @@
         </ul>
 
         <li><h4>Update</h4></li>
+        Syntax for UpdateOne: db.collectionName.updateOne(filter, update)<br />
+        Example: db.users.updateOne({name:'Krishan'}, {$set:
+        {name:'Krishna'}})<br />
+        Syntax for UpdateMany: db.collectionName.update(filter, update)<br />
+        Example: db.users.updateMany({name:'Krishna'}, {$set:
+        {status:false}})<br />
+        <span class="text-info"
+          >Note: The <mark>$set operator</mark> replacex the value of a field
+          with the specified value</span
+        >
         <li><h4>Delete</h4></li>
       </ol>
     </div>
